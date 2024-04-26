@@ -17,9 +17,7 @@ export const EmployeesList = () => {
 
   const [employees, setEmployees] = useState<FormValues[]>([]);
 
-  const { selectedEmployee, chooseEmployee, clearChosenEmployee } = useContext(
-    EmployeeContext
-  ) as EmployeeContextType;
+  const { chooseEmployee } = useContext(EmployeeContext) as EmployeeContextType;
 
   const fetchEmployees = async () => {
     try {
