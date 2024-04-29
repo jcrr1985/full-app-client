@@ -59,7 +59,7 @@ export const EmployeesList = () => {
         {employees.map((employee) => (
           <div
             style={{
-              width: "30%",
+              width: employees.length > 2 ? "30%" : "45%",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
@@ -83,10 +83,10 @@ export const EmployeesList = () => {
               {parseDepartment(employee.department)}
             </h4>
             <div className="flex justify-between items-center text-gray-600">
-              <p>Hire Date</p>
+              <p>Hire Date:</p>
               <p>{new Date(employee.hireDate).toLocaleDateString("en-CA")}</p>
             </div>
-            <div className="flex justify-between items-center mt-4">
+            <div className="flex justify-between items-center mt-4 gap-1">
               <button
                 className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300"
                 onClick={() => handleViewDetails(employee)}
