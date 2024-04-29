@@ -58,8 +58,14 @@ export const EmployeesList = () => {
       <div className="flex justify-center flex-wrap gap-6">
         {employees.map((employee) => (
           <div
-            style={{ width: "30%" }}
-            className="bg-white shadow-lg rounded-lg overflow-hidden p-5"
+            style={{
+              width: "30%",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+            className="bg-white shadow-lg rounded-lg overflow-hidden p-5 flex flex-col justify-around"
             key={employee._id}
           >
             <div
