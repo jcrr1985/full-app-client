@@ -10,6 +10,8 @@ interface EmployeeContextType {
   SetEmployeeListInCtx: (employeeList: FormValues[]) => void;
 }
 
+export const apiUrl = "https://cars-server-1.onrender.com";
+
 export const EmployeeContext = createContext<EmployeeContextType>({
   selectedEmployee: null,
   employeeListInCtx: [],

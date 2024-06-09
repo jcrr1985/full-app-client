@@ -8,7 +8,7 @@ import { FormValues } from "../interfaces/Iemployees";
 import { AddEmployee } from "./AddEmployee";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
-import { EmployeeContext } from "../contexts/EmployeeContext";
+import { EmployeeContext, apiUrl } from "../contexts/EmployeeContext";
 
 import { EmployeeContextType } from "../interfaces/IemployeeContextType";
 
@@ -21,9 +21,7 @@ export const EmployeesList = () => {
 
   const fetchEmployees = async () => {
     try {
-      const response = await axios.get(
-        "https://full-app-server.onrender.com/employees"
-      );
+      const response = await axios.get(`${apiUrl}/employees`);
       console.log("response", response);
       const employeesFetched: FormValues[] = response.data;
       setEmployees(employeesFetched);
