@@ -10,7 +10,8 @@ interface EmployeeContextType {
   SetEmployeeListInCtx: (employeeList: FormValues[]) => void;
 }
 
-export const apiUrl = "https://cars-server-1.onrender.com";
+export const apiUrl =
+  "cars-server-3cb4-1882vydic-jcrr1985s-projects.vercel.app";
 
 export const EmployeeContext = createContext<EmployeeContextType>({
   selectedEmployee: null,
